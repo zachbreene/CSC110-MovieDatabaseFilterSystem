@@ -1,5 +1,5 @@
 <h1 align=center> Movies Database Filter </h1>
-<h2 align=center> A CSC110 Project by Zachary Breene </h2>
+<h2 align=center> A CSC110: Introduction to Python Project by Zachary Breene </h2>
 <h4 align=center> Created at The University of Rhode Island, December 2020 </h4>
 </n>
 <h4 align=center> *NO AI WAS USED IN THE CREATION OF THIS PROJECT* </h4>
