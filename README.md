@@ -8,7 +8,7 @@ My task for this project was to create a Python-based command-line interface (CL
 ---
 
 ## Implementation + Functions
-### breene_z_movies.py
+### moviefilter.py
 
 This is the main file containing the core logic, calculations, and the interactive CLI menu for the program[cite: 6]. </n>
 
