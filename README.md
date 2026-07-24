@@ -1,7 +1,8 @@
 <h1 align=center> Movies Database Filter </h1>
 <h2 align=center> A CSC110 Project by Zachary Breene </h2>
 <h4 align=center> Created at The University of Rhode Island, December 2020 </h4>
-
+</n>
+<h4 align=center> NO AI WAS USED IN THE CREATION OF THIS PROJECT </h4>
 ## Introduction
 My task for this project was to create a Python-based command-line interface (CLI) program capable of parsing, filtering, and analyzing a text-based database of movies. With the data properly loaded, the program can execute various search queries and can export a sorted version of the database using a custom selection sort algorithm.
 
@@ -41,5 +42,3 @@ As I was the sole member of this project, I contributed to the whole of the proj
 * Creation of search, filter, and computation algorithms
 * Implementation of Selection Sort for chronological ordering
 * CLI menu design, error handling, and user input validation
-
-<h4 align=center> NO AI WAS USED IN THE CREATION OF THIS PROJECT </h4>
