@@ -5,7 +5,7 @@
 
 def openFile():
   #Sampled from Lab 5
-  # Prompts the user for a valid filename and handles exceptions if the file isn't found[cite: 6].
+  # Prompts the user for a valid filename and handles exceptions if the file isn't found.
   rightFile = False
   while rightFile == False:
     filename = input("Enter file name: ")
@@ -17,7 +17,7 @@ def openFile():
     return infile
 
 def getMovies():
-  # Opens the specified text file and parses the comma-separated values into parallel lists[cite: 6].
+  # Opens the specified text file and parses the comma-separated values into parallel lists.
   infile = openFile()
   titleList = []
   genreList = []
@@ -26,11 +26,11 @@ def getMovies():
   studioList = []
   releaseYearList = []
   
-  # Read the first line and strip any whitespace/newline characters[cite: 6].
+  # Read the first line and strip any whitespace/newline characters.
   line = infile.readline()
   line = line.strip()
   
-  # Iterate through the file until an empty string is reached, appending data to respective lists[cite: 6].
+  # Iterate through the file until an empty string is reached, appending data to respective lists.
   while line != '':
     title, genre, runtime, rating, studio, releaseYear = line.split(",")
     titleList.append(title)
@@ -46,7 +46,7 @@ def getMovies():
   return titleList, genreList, runtimeList, ratingList, studioList, releaseYearList
 
 def findFilmsByStudio(studio, titleList, genreList, runtimeList, ratingList, studioList, releaseYearList):
-  # Performs a linear search through the parallel lists to find and format all movies by a specific studio[cite: 6].
+  # Performs a linear search through the parallel lists to find and format all movies by a specific studio.
   studioFilmList = ''
   for i in range(len(titleList)):
     if studio == studioList[i]:
@@ -54,7 +54,7 @@ def findFilmsByStudio(studio, titleList, genreList, runtimeList, ratingList, stu
   return studioFilmList
 
 def longestFilmByGenre(genre, titleList, genreList, runtimeList, ratingList, studioList, releaseYearList):
-  # Finds the maximum runtime for a given genre, then retrieves the movie information associated with that runtime[cite: 6].
+  # Finds the maximum runtime for a given genre, then retrieves the movie information associated with that runtime.
   runtime = 0
   for i in range(len(genreList)):
     if genreList[i] == genre and int(runtimeList[i]) > runtime:
@@ -65,7 +65,7 @@ def longestFilmByGenre(genre, titleList, genreList, runtimeList, ratingList, stu
   return longestFilm
 
 def findFilmsByRating(yearMin, yearMax, rating, titleList, genreList, runtimeList, ratingList, studioList, releaseYearList):
-  # Filters movies based on a specified year range and an MPAA rating[cite: 6].
+  # Filters movies based on a specified year range and an MPAA rating.
   ratingFilmList = ''
   for i in range(len(ratingList)):
     if (releaseYearList[i] >= yearMin) and (releaseYearList[i] <= yearMax):
@@ -74,7 +74,7 @@ def findFilmsByRating(yearMin, yearMax, rating, titleList, genreList, runtimeLis
   return ratingFilmList
 
 def findFilmByTitle(title, titleList, genreList, runtimeList, ratingList, studioList, releaseYearList):
-  # Searches the title list for an exact string match and returns the full details of that movie[cite: 6].
+  # Searches the title list for an exact string match and returns the full details of that movie.
   titleInfo = ''
   for i in range(len(titleList)):
     if title == titleList[i]:
@@ -82,7 +82,7 @@ def findFilmByTitle(title, titleList, genreList, runtimeList, ratingList, studio
   return titleInfo
 
 def avgFilmRuntimeByRating(rating, titleList, genreList, runtimeList, ratingList, studioList, releaseYearList):
-  # Calculates the mathematical average runtime for all movies that share a specific rating[cite: 6].
+  # Calculates the mathematical average runtime for all movies that share a specific rating.
   runtimeAvg = 0
   summ = 0
   listForRuntimeAvg = []
@@ -94,14 +94,14 @@ def avgFilmRuntimeByRating(rating, titleList, genreList, runtimeList, ratingList
   return runtimeAvg
 
 def sortByYear(titleList, genreList, runtimeList, ratingList, studioList, releaseYearList):
-  # Implements a Selection Sort algorithm to chronologically order the data based on the release year[cite: 6].
-  # It updates all parallel lists to maintain data integrity across the database[cite: 6].
+  # Implements a Selection Sort algorithm to chronologically order the data based on the release year.
+  # It updates all parallel lists to maintain data integrity across the database.
   for i in range(0, len(releaseYearList)):
     earliestYear = i
     for j in range(i + 1, len(releaseYearList)):
       if releaseYearList[j] < releaseYearList[earliestYear]:
         earliestYear = j
-    # Swapping elements for all parallel lists[cite: 6].
+    # Swapping elements for all parallel lists.
     releaseYearList[i], releaseYearList[earliestYear] = releaseYearList[earliestYear], releaseYearList[i]
     titleList[i], titleList[earliestYear] = titleList[earliestYear], titleList[i]
     genreList[i], genreList[earliestYear] = genreList[earliestYear], genreList[i]
@@ -109,7 +109,7 @@ def sortByYear(titleList, genreList, runtimeList, ratingList, studioList, releas
     ratingList[i], ratingList[earliestYear] = ratingList[earliestYear], ratingList[i]
     studioList[i], studioList[earliestYear] = studioList[earliestYear], studioList[i]
     
-  # Prompts for an output file name and writes the newly sorted data to it[cite: 6].
+  # Prompts for an output file name and writes the newly sorted data to it.
   outfilename = input("Enter name of output file: ")
   outfile = open (outfilename, 'w')
   for i in range(len(releaseYearList)):
@@ -119,7 +119,7 @@ def sortByYear(titleList, genreList, runtimeList, ratingList, studioList, releas
 
 def getChoice():
     # Sampled from Lab 5
-    # Prints the interactive menu to the console and handles value errors for integer input[cite: 6].
+    # Prints the interactive menu to the console and handles value errors for integer input.
     print("")
     print("Make a selection from the following choices:")
     print("1 - Find all films produced by a certain studio")
@@ -141,7 +141,7 @@ def getChoice():
 
 def main(): 
   #Sampled from Lab 5
-  # The main logic loop. Loads the data, invokes the menu, and handles conditional paths based on user input[cite: 6].
+  # The main logic loop. Loads the data, invokes the menu, and handles conditional paths based on user input.
   titleList, genreList, runtimeList, ratingList, studioList, releaseYearList = getMovies()
   choice = getChoice()
   while choice != 7:
