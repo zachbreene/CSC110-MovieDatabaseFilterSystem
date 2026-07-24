@@ -10,23 +10,23 @@ My task for this project was to create a Python-based command-line interface (CL
 ## Implementation + Functions
 ### moviefilter.py
 
-This is the main file containing the core logic, calculations, and the interactive CLI menu for the program[cite: 6]. </n>
+This is the main file containing the core logic, calculations, and the interactive CLI menu for the program. </n>
 
 &emsp; ***File Parsing & Loading***
 
-* The script utilizes `openFile()` to safely prompt the user for the database file, catching invalid inputs[cite: 6]. The `getMovies()` function then reads the data line-by-line, splitting the comma-separated values into parallel lists for titles, genres, runtimes, ratings, studios, and release years[cite: 6].
+* The script utilizes `openFile()` to safely prompt the user for the database file, catching invalid inputs. The `getMovies()` function then reads the data line-by-line, splitting the comma-separated values into parallel lists for titles, genres, runtimes, ratings, studios, and release years.
 
 &emsp; ***Search & Filter Methods***
 
-* The program features multiple search methods. `findFilmsByStudio()` iterates through the lists to find and format all movies produced by a specific studio[cite: 6]. `longestFilmByGenre()` locates the film with the maximum runtime within a specific genre[cite: 6]. `findFilmsByRating()` retrieves movies that fall within a specified year range and match a given rating[cite: 6]. Finally, `findFilmByTitle()` performs a linear search for an exact movie title match[cite: 6].
+* The program features multiple search methods. `findFilmsByStudio()` iterates through the lists to find and format all movies produced by a specific studio. `longestFilmByGenre()` locates the film with the maximum runtime within a specific genre. `findFilmsByRating()` retrieves movies that fall within a specified year range and match a given rating. Finally, `findFilmByTitle()` performs a linear search for an exact movie title match.
 
 &emsp; ***Selection Sort & Export***
 
-* The `sortByYear()` function implements an in-place selection sort algorithm to organize all the parallel lists in chronological order based on the release year[cite: 6]. It then writes the newly sorted database out to a user-defined text file[cite: 6].
+* The `sortByYear()` function implements an in-place selection sort algorithm to organize all the parallel lists in chronological order based on the release year. It then writes the newly sorted database out to a user-defined text file.
 
 ### movies.txt
 
-This is the dataset used to populate the program. It is a comma-separated text file containing records for 150 unique films, formatted sequentially with fields corresponding to Title, Genre, Runtime, Rating, Studio, and Release Year[cite: 7].
+This is the dataset used to populate the program. It is a comma-separated text file containing records for 150 unique films, formatted sequentially with fields corresponding to Title, Genre, Runtime, Rating, Studio, and Release Year.
 
 ---
 
@@ -37,9 +37,9 @@ If you want to run this program, you must download both the `moviefilter.py` scr
 
 ## Contribution
 As I was the sole member of this project, I contributed to the whole of the project. This contribution is as follows:
-* Implementation of Python logic and parallel lists[cite: 6]
-* Creation of search, filter, and computation algorithms[cite: 6]
-* Implementation of Selection Sort for chronological ordering[cite: 6]
-* CLI menu design, error handling, and user input validation[cite: 6]
+* Implementation of Python logic and parallel lists
+* Creation of search, filter, and computation algorithms
+* Implementation of Selection Sort for chronological ordering
+* CLI menu design, error handling, and user input validation
 
 <h4 align=center> NO AI WAS USED IN THE CREATION OF THIS PROJECT </h4>
